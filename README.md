@@ -1,6 +1,8 @@
 # ASTR260_HW09
 
-Problem 1: run AidanWalk_HW09_1 by executing python AidanWalk_HW09_1.py. This will save a lovely plot titled "AidanWalk_HW09_1_Plot.png" in the local directory to answer a), b), and c). Euler's and Runge-Kutta method both with a step size of 25. 
+Problem 1: 
+
+run AidanWalk_HW09_1 by executing python AidanWalk_HW09_1.py. This will save a lovely plot titled "AidanWalk_HW09_1_Plot.png" in the local directory to answer a), b), and c). Euler's and Runge-Kutta method both with a step size of 25. 
 
 Problem 2: 
 
