@@ -45,13 +45,13 @@ def rk4(xnaught = None,
        vnaught = array[x,y], x and y components of initial velocity
        '''
     #initialize arrays where data will be stored as well as vnaught, xnaught
-    velcities = currentV = vnaught
+    velocities = currentV = vnaught
     positions = currentPos = xnaught
     #compute velocity, position for each time in times
     for t in times:
         #update arrays with current information
         positions = np.vstack((positions, currentPos))
-        velocities = np.vstack((velcities, currentV))
+        velocities = np.vstack((velocities, currentV))
         
         #calculate velocity:
         #compute k1 
@@ -77,7 +77,7 @@ def rk4(xnaught = None,
         currentV = currentV + 1/6 * (k1v + 2*k2v + 2*k3v + k4v)
         currentPos = currentPos + 1/6 * (k1x + 2*k2x + 2*k3x + k4x)
         
-    return positions, velcities
+    return positions, velocities
 
 if __name__ == "__main__":
     maxTime = 10
