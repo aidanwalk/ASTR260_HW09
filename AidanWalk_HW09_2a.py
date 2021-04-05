@@ -98,12 +98,12 @@ if __name__ == "__main__":
                                            initial_velocity=v0)
     #compute position via RK4                                   
     RK4Pos, RK4Vel = rk4(xnaught=x0,
-              vnaught=v0,
-              times = times,
-              h = timeStep,
-              theta = angle,
-              deriv = accelerationOfBall,
-              deriv_params = {'Vnaught':v0, 'a':g, 't':times})
+                         vnaught=v0,
+                         times = times,
+                         h = timeStep,
+                         theta = angle,
+                         deriv = accelerationOfBall,
+                         deriv_params = {'Vnaught':v0, 'a':g, 't':times})
     
     
     #plot analytic solution 
@@ -117,9 +117,9 @@ if __name__ == "__main__":
     
     #make plot look pretty
     plt.title('Projectile Motion - No Drag')
-    plt.xlabel('x-position')
+    plt.xlabel('x-position [meters]')
     plt.xlim(0, 15)
-    plt.ylabel('y-position')
+    plt.ylabel('y-position [meters]')
     plt.ylim(0, 5)
     legend = plt.legend(loc='upper right')
     legend.get_frame().set_facecolor('#f8f9f9')

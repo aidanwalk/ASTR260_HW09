@@ -128,9 +128,9 @@ if __name__ == "__main__":
     
     #make plot look pretty
     plt.title('Projectile Motion With Drag')
-    plt.xlabel('x-position')
+    plt.xlabel('x-position [meters]')
     plt.xlim(0, 150)
-    plt.ylabel('y-position')
+    plt.ylabel('y-position [meters]')
     plt.ylim(0, 60)
     legend = plt.legend(loc='upper right')
     legend.get_frame().set_facecolor('#f8f9f9')
