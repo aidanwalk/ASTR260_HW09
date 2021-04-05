@@ -75,17 +75,18 @@ def createVisualization():
        Makes plot look pretty
        saves figure to local directory as AidanWalk_HW09_1_Plot.png'''
     #plot analytic solution
-    plt.plot(years_since_start, analytic_sol,
+    plt.plot(years_since_start+1800, analytic_sol,
              label='Analytic Solution', color='#fe4010', linewidth=3)
     #plot Eulers method
-    plt.plot(eulersTimes, eulersVals,
+    plt.plot(eulersTimes+1800, eulersVals,
              label="Eulers Method", color='#8c8c8c', linewidth=2)
     #plot RK4
-    plt.plot(RK4Times, RK4Vals,
+    plt.plot(RK4Times+1800, RK4Vals,
              color='black', label='Runge-Kutta 4', linestyle=':')
              
     plt.title('Population Growth') #assigns plot title
     plt.xlabel('Years') #label x-axis
+    #plt.xticks(yearRange)
     plt.ylabel('Population Size *10^9') #label y-axis
     legend = plt.legend(loc='lower right') #Display legend
     legend.get_frame().set_facecolor('#f8f9f9') #color legend background
@@ -93,6 +94,8 @@ def createVisualization():
     plotFName='AidanWalk_HW09_1_Plot'
     plt.savefig(plotFName +'.png')
     print('Plot saved to:', plotFName)
+    
+    return None
 
 if __name__ == "__main__":
     K = 10 #10 billion
